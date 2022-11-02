@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #181719;
+    color: white;
+}
+
+.main {
+    background-color: aliceblue;
+    margin: 40px 100px;
+    background-color: #181719;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navigation button {
+    border-style: none;
+    border: 1px solid white;
+    cursor: pointer;
+    height: 40px;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+.navigation button:hover {
+    background-color: rgb(163, 22, 27);
+    transition: .3s;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+li .active {
+    text-decoration-line: underline;
+}
+
+li a:hover {
+    text-decoration-line: underline;
+    color: rgb(204, 36, 41);
+    transition: .3s;
+}
+
+li:nth-last-child(n+2) {
+    margin-right: 80px;
+}
+
+.modern-interior {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description {
+    line-height: 2.5rem;
+    width: 500px;
+    font-size: 1.5rem;
+    letter-spacing: .6rem;
+}
+
+.description p {
+    margin: 50px auto;
+    letter-spacing: .4rem;
+}
+
+.description a {
+    text-decoration: none;
+    letter-spacing: .2rem;
+}
+
+.description a:hover {
+    color: red;
+    transition: .2s;
+}
+
+.container-interior {
+    position: relative;
+}
+
+.interior {
+    width: 1000px;
+}
+
+
+.by {
+    position: absolute;
+    right: 40px;
+    top: 700px;
+    box-shadow: 2px 2px 2px black;
+    padding: 20px;
+    width: 400px;
+}
+
+.by h3 {
+    margin-top: 15px;
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-data {
+    line-height: 2rem;
+}
+
+.author-data span {
+    font-weight: bold;
+}
+
+.author-data p {
+    color: gray;
+}
+
+.author-img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.credit {
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 8px;
+
+}
+
+.credit a {
+    text-decoration: none;
+}
+
+.credit a:hover {
+    color: red;
+}
+
+.lines {
+    position: absolute;
+    right: 100px;
+    top: 10px;
+    cursor: pointer;
+    /* La opacidad a activar */
+    opacity: 0;
+}
+
+.lines .line {
+    font-size: 4.5rem;
+    line-height: 1rem;
+}
+
+@media (max-width: 1515px) {
+    .interior {
+        width: 750px;
+
+    }
+
+    .by {
+        top: 480px;
+    }
+
+}
+
+
+@media (max-width: 1400px) {
+    .modern-interior {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin: auto;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-interior {
+        display: flex;
+        justify-content: center;
+    }
+
+    .credit {
+        margin-top: 250px;
+    }
+}
+
+@media (max-width: 925px) {
+    .interior {
+        width: 500px;
+    }
+
+    .lines {
+        opacity: 1;
+        z-index: 15;
+    }
+
+    li:nth-last-child(n+2) {
+        margin-right: 0px;
+    }
+
+    nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .nav-active {
+        /* Activar Opacidad */
+        height: 500vh;
+        opacity: 1;
+    }
+
+    ul {
+        margin-top: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        line-height: 6rem;
+        font-size: 3rem;
+    }
+
+    .by {
+        top: 300px;
+        right: 20px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .interior {
+        width: 400px;
+    }
+
+    .description {
+        width: auto;
+    }
+
+    .by {
+        width: auto;
+        top: 245px;
+    }
+}
